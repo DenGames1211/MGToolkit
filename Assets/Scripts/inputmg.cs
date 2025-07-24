@@ -1,23 +1,24 @@
 using UnityEngine;
+using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 
 public class InputMg : MonoBehaviour
 {
     public OVRHand ovrHand;
-    private Vector2 charMove = Vector2.zero;
     public StarterAssets.StarterAssetsInputs inputs;
+    private Vector2 charMove = Vector2.zero;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Update()
     {
-        
+        HandleMovementGestures();
     }
 
-    // Update is called once per frame
-    void Update()
+    void HandleMovementGestures()
     {
         OVRHand.MicrogestureType gesture = ovrHand.GetMicrogestureType();
 
-        switch (gesture) {
+        switch (gesture)
+        {
             case OVRHand.MicrogestureType.NoGesture:
                 break;
             case OVRHand.MicrogestureType.SwipeLeft:
@@ -43,4 +44,5 @@ public class InputMg : MonoBehaviour
 
         inputs.MoveInput(charMove);
     }
+
 }

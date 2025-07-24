@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/VideoPlayerMS.unity
     guid: 1b1c5974df2e1dd4c8c6e52c9db592eb
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
+    path: Assets/Scenes/PlaygroundMS.unity
     guid: e9017d5f96b9f09489b4b37e1d6eb914
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
